@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZL CLOTH - Fashion Wanita Trendy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.85) 0%, rgba(255, 20, 147, 0.85) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('keys/fashion-background?prompt=elegant%20minimalist%20fashion%20boutique%20interior%20with%20flowing%20fabrics%20and%20soft%20lighting') center/cover;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .hero-bg {
+                min-height: 100vh;
+                padding: 1rem;
+            }
+            
+            .floating h1 {
+                font-size: 3.5rem !important;
+            }
+            
+            .floating h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem !important;
+                padding: 0 1rem;
+            }
+            
+            .hero-content .space-x-4 {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .hero-content .space-x-4 button {
+                width: 100%;
+                max-width: 280px;
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .card-hover {
+                margin-bottom: 1.5rem;
+            }
+            
+            .card-hover:hover {
+                transform: translateY(-5px);
+            }
+            
+            .payment-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.5rem !important;
+            }
+            
+            .payment-grid > div {
+                height: 2.5rem !important;
+                background: #f9fafb !important;
+                border: 1px solid #e5e7eb !important;
+                border-radius: 0.5rem !important;
+                padding: 0.25rem !important;
+            }
+            
+            .payment-grid img {
+                height: 1rem !important;
+                max-width: 3rem !important;
+                object-fit: contain !important;
+            }
+            
+            .payment-grid .text-sm {
+                font-size: 0.75rem !important;
+                font-weight: 600 !important;
+            }
+            
+            .crypto-container {
+                width: 1.5rem !important;
+                height: 1.5rem !important;
+            }
+            
+            .crypto-container img {
+                width: 1rem !important;
+                height: 1rem !important;
+            }
+            
+            .social-link {
+                font-size: 0.875rem;
+            }
+            
+            .social-link svg {
+                width: 1rem !important;
+                height: 1rem !important;
+            }
+            
+            .language-dropdown {
+                min-width: 200px !important;
+                right: -2rem !important;
+            }
+            
+            .mobile-menu {
+                width: 280px !important;
+                right: 1rem !important;
+            }
+            
+            .live-counter-mobile {
+                max-width: 90% !important;
+                padding: 1rem !important;
+            }
+            
+            .live-counter-mobile .flex {
+                flex-direction: column !important;
+                gap: 1.5rem !important;
+                text-align: center !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+            }
+            
+            .live-counter-mobile .w-px {
+                width: 80% !important;
+                height: 1px !important;
+                margin: 0 auto !important;
+            }
+            
+            .live-counter-mobile .text-center {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            
+            .live-counter-mobile .text-2xl {
+                text-align: center !important;
+                width: 100% !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+            
+            .live-counter-mobile .text-sm {
+                text-align: center !important;
+                width: 100% !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+            
+            .live-counter-mobile p {
+                text-align: center !important;
+                width: 100% !important;
+                margin: 0 auto !important;
+            }
+            
+            .live-counter-mobile span {
+                text-align: center !important;
+                display: inline-block !important;
+                width: 100% !important;
+            }
+            
+            .contact-grid-mobile {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            .footer-grid-mobile {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+                text-align: center;
+            }
+            
+            .newsletter-mobile {
+                flex-direction: column !important;
+                gap: 1rem !important;
+            }
+            
+            .newsletter-mobile input {
+                width: 100% !important;
+            }
+            
+            .newsletter-mobile button {
+                width: 100% !important;
+            }
+        }
+        
+        /* Touch-friendly interactions */
+        @media (hover: none) and (pointer: coarse) {
+            .card-hover:active {
+                transform: translateY(-5px);
+                transition: transform 0.1s ease;
+            }
+            
+            button:active {
+                transform: scale(0.95);
+                transition: transform 0.1s ease;
+            }
+            
+            .social-link:active {
+                transform: translateY(-2px) scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white fixed w-full z-50" style="border-bottom: 2px solid white;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-playfair font-bold text-pink-500">ZL</h1>
+                    </div>
+                    
+                    <!-- Language Selector (Mobile Position) -->
+                    <div class="relative language-selector">
+                        <button class="language-btn flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition duration-300 px-3 py-2 rounded-lg border border-gray-200 hover:border-purple-300">
+                            <span class="current-language-flag">🇮🇩</span>
+                            <span class="current-language-text">ID</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="language-dropdown hidden absolute left-0 top-12 bg-white rounded-xl shadow-2xl border border-gray-100 min-w-48 z-50 overflow-hidden">
+                            <div class="py-2">
+                                <button class="language-option w-full text-left px-4 py-3 hover:bg-purple-50 transition duration-300 flex items-center space-x-3" data-lang="id">
+                                    <span class="text-xl">🇮🇩</span>
+                                    <div>
+                                        <div class="font-medium text-gray-800">Bahasa Indonesia</div>
+                                        <div class="text-sm text-gray-500">Indonesian</div>
+                                    </div>
+                                </button>
+                                <button class="language-option w-full text-left px-4 py-3 hover:bg-purple-50 transition duration-300 flex items-center space-x-3" data-lang="en">
+                                    <span class="text-xl">🇺🇸</span>
+                                    <div>
+                                        <div class="font-medium text-gray-800">English</div>
+                                        <div class="text-sm text-gray-500">United States</div>
+                                    </div>
+                                </button>
+                                <button class="language-option w-full text-left px-4 py-3 hover:bg-purple-50 transition duration-300 flex items-center space-x-3" data-lang="jp">
+                                    <span class="text-xl">🇯🇵</span>
+                                    <div>
+                                        <div class="font-medium text-gray-800">日本語</div>
+                                        <div class="text-sm text-gray-500">Japanese</div>
+                                    </div>
+                                </button>
+                                <button class="language-option w-full text-left px-4 py-3 hover:bg-purple-50 transition duration-300 flex items-center space-x-3" data-lang="kr">
+                                    <span class="text-xl">🇰🇷</span>
+                                    <div>
+                                        <div class="font-medium text-gray-800">한국어</div>
+                                        <div class="text-sm text-gray-500">Korean</div>
+                                    </div>
+                                </button>
+                                <button class="language-option w-full text-left px-4 py-3 hover:bg-purple-50 transition duration-300 flex items-center space-x-3" data-lang="cn">
+                                    <span class="text-xl">🇨🇳</span>
+                                    <div>
+                                        <div class="font-medium text-gray-800">中文</div>
+                                        <div class="text-sm text-gray-500">Chinese</div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 transition duration-300" data-key="nav.home">Beranda</a>
+                    <a href="#koleksi" class="nav-link text-gray-700 hover:text-purple-600 transition duration-300" data-key="nav.collection">Koleksi</a>
+                    <a href="#trending" class="nav-link text-gray-700 hover:text-purple-600 transition duration-300" data-key="nav.trending">Trending</a>
+                    <a href="#tentang" class="nav-link text-gray-700 hover:text-purple-600 transition duration-300" data-key="nav.about">Tentang</a>
+                    <a href="#kontak" class="nav-link text-gray-700 hover:text-purple-600 transition duration-300" data-key="nav.contact">Kontak</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-btn p-2 rounded-lg border-2 border-purple-400 bg-purple-500/20 backdrop-blur-sm transition-all duration-300 hover:bg-purple-500/30">
+                        <span class="sr-only">Menu</span>
+                        <div class="w-6 h-6">
+                            <span class="block w-6 h-0.5 bg-purple-600 mb-1 transition-all duration-300"></span>
+                            <span class="block w-6 h-0.5 bg-purple-600 mb-1 transition-all duration-300"></span>
+                            <span class="block w-6 h-0.5 bg-purple-600 transition-all duration-300"></span>
+                        </div>
+                    </button>
+                    
+                    <!-- Mobile Menu Dropdown -->
+                    <div class="mobile-menu hidden absolute top-16 right-4 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50">
+                        <div class="py-2">
+                            <a href="#home" class="mobile-menu-link block px-6 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition duration-300 border-b border-gray-100">
+                                <span class="flex items-center">
+                                    <span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                                    Beranda
+                                </span>
+                            </a>
+                            <a href="#koleksi" class="mobile-menu-link block px-6 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition duration-300 border-b border-gray-100">
+                                <span class="flex items-center">
+                                    <span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                                    Koleksi
+                                </span>
+                            </a>
+                            <a href="#trending" class="mobile-menu-link block px-6 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition duration-300 border-b border-gray-100">
+                                <span class="flex items-center">
+                                    <span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                                    Trending
+                                </span>
+                            </a>
+                            <a href="#tentang" class="mobile-menu-link block px-6 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition duration-300 border-b border-gray-100">
+                                <span class="flex items-center">
+                                    <span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                                    Tentang
+                                </span>
+                            </a>
+                            <a href="#kontak" class="mobile-menu-link block px-6 py-3 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition duration-300">
+                                <span class="flex items-center">
+                                    <span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                                    Kontak
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center">
+        <div class="hero-content text-center text-white px-4">
+            <div class="floating">
+                <h1 class="text-6xl md:text-8xl font-playfair font-bold mb-4">ZL</h1>
+                <h2 class="text-2xl md:text-4xl font-playfair mb-6">CLOTH</h2>
+            </div>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto hero-subtitle" data-key="hero.subtitle">
+                Fashion Wanita Trendy untuk Gaya Hidup Modern
+            </p>
+            <div class="space-x-4">
+                <button id="exploreCollectionBtn" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl" data-key="hero.explore">
+                    Jelajahi Koleksi
+                </button>
+                <button id="seeTrendingBtn" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl" data-key="hero.trending">
+                    Lihat Trending
+                </button>
+            </div>
+            
+            <!-- Live Shopping Counter -->
+            <div class="mt-12 bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 max-w-md mx-auto live-counter-mobile">
+                <div class="flex items-center justify-center space-x-6 text-white">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-yellow-300" id="visitorsCount">1,247</div>
+                        <div class="text-sm opacity-80" data-key="hero.online">Online Now</div>
+                    </div>
+                    <div class="w-px h-12 bg-white opacity-30"></div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-green-300" id="ordersToday">89</div>
+                        <div class="text-sm opacity-80" data-key="hero.orders">Orders Today</div>
+                    </div>
+                </div>
+                
+                <!-- Presented by credit -->
+                <div class="text-center mt-4 pt-3 border-t border-white border-opacity-20">
+                    <p class="text-base text-white opacity-90 tracking-wider font-semibold">
+                        Presented by <span class="font-bold text-yellow-300 text-xl">ZAO MUI LEE</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Koleksi Unggulan -->
+    <section id="koleksi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-gray-800 mb-4" data-key="collection.title">Koleksi Unggulan</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-key="collection.subtitle">
+                    Temukan pakaian wanita terbaru dengan desain eksklusif dan kualitas premium
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-80 bg-gradient-to-br from-pink-200 to-pink-300 flex items-center justify-center">
+                        <img src="keys/dress-casual?prompt=elegant%20casual%20dress%20for%20women%20modern%20style%20pastel%20colors" alt="Dress Casual" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2" data-key="product.dress">Dress Casual Elegan</h3>
+                        <p class="text-gray-600 mb-4" data-key="product.dress.desc">Perfect untuk acara santai maupun formal</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-purple-600">Rp 299K</span>
+                            <button class="product-detail-btn bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300 transform hover:scale-105" data-product="dress-casual" data-key="product.detail">
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-80 bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center">
+                        <img src="keys/blouse-trendy?prompt=trendy%20blouse%20for%20women%20modern%20office%20wear%20stylish" alt="Blouse Trendy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2" data-key="product.blouse">Blouse Trendy</h3>
+                        <p class="text-gray-600 mb-4" data-key="product.blouse.desc">Kombinasi sempurna untuk look profesional</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-purple-600">Rp 199K</span>
+                            <button class="product-detail-btn bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300 transform hover:scale-105" data-product="blouse-trendy" data-key="product.detail">
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-80 bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center">
+                        <img src="keys/jumpsuit-modern?prompt=modern%20jumpsuit%20for%20women%20chic%20style%20contemporary%20fashion" alt="Jumpsuit Modern" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2" data-key="product.jumpsuit">Jumpsuit Modern</h3>
+                        <p class="text-gray-600 mb-4" data-key="product.jumpsuit.desc">Statement piece untuk tampil percaya diri</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-purple-600">Rp 399K</span>
+                            <button class="product-detail-btn bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300 transform hover:scale-105" data-product="jumpsuit-modern" data-key="product.detail">
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Now -->
+    <section id="trending" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-gray-800 mb-4" data-key="trending.title">Trending Now</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-key="trending.subtitle">
+                    Ikuti tren fashion terkini yang sedang populer di kalangan wanita modern
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="keys/trending-fashion?prompt=trendy%20women%20fashion%20collection%20modern%20stylish%20clothing%20display" alt="Trending Fashion" class="rounded-2xl shadow-2xl w-full">
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3" data-key="trending.blazer">🌟 Oversized Blazer</h3>
+                        <p class="text-gray-600" data-key="trending.blazer.desc">Trend blazer oversized yang memberikan kesan professional namun tetap stylish untuk berbagai occasion.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3" data-key="trending.skirt">✨ Midi Skirt</h3>
+                        <p class="text-gray-600" data-key="trending.skirt.desc">Rok midi dengan berbagai motif dan warna yang cocok untuk gaya feminin dan elegan.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3" data-key="trending.crop">💫 Crop Top Sets</h3>
+                        <p class="text-gray-600" data-key="trending.crop.desc">Set crop top yang trendy dan versatile, perfect untuk look casual maupun semi-formal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-playfair font-bold text-gray-800 mb-6" data-key="about.title">Tentang ZL CLOTH</h2>
+                    <p class="text-lg text-gray-600 mb-6" data-key="about.desc1">
+                        ZL CLOTH adalah brand fashion wanita yang berkomitmen menghadirkan pakaian berkualitas tinggi dengan desain yang mengikuti tren terkini. Kami percaya bahwa setiap wanita berhak tampil percaya diri dengan style yang unik.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8" data-key="about.desc2">
+                        Dengan pengalaman bertahun-tahun di industri fashion, kami terus berinovasi untuk memberikan koleksi terbaik yang memadukan kenyamanan, kualitas, dan gaya modern.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <h3 class="text-3xl font-bold text-purple-600 mb-2">500+</h3>
+                            <p class="text-gray-600" data-key="about.products">Produk Berkualitas</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-3xl font-bold text-purple-600 mb-2">10K+</h3>
+                            <p class="text-gray-600" data-key="about.customers">Pelanggan Puas</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="keys/brand-story?prompt=elegant%20fashion%20brand%20story%20women%20clothing%20boutique%20modern%20interior" alt="Brand Story" class="rounded-2xl shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-gradient-to-r from-purple-600 to-pink-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-playfair font-bold text-white mb-4" data-key="newsletter.title">Stay Updated</h2>
+            <p class="text-xl text-purple-100 mb-8" data-key="newsletter.subtitle">Dapatkan info terbaru tentang koleksi dan promo eksklusif!</p>
+            <div class="max-w-md mx-auto flex gap-4 newsletter-mobile">
+                <input type="email" id="newsletterEmail" placeholder="Email address" data-key-placeholder="newsletter.placeholder" class="flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                <button id="subscribeBtn" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 transform hover:scale-105" data-key="newsletter.subscribe">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-gray-800 mb-4" data-key="reviews.title">What Our Customers Say</h2>
+                <p class="text-xl text-gray-600" data-key="reviews.subtitle">Testimoni dari para fashionista yang sudah merasakan kualitas ZL</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-purple-600 font-bold">S</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Agnia Istighfarin</h4>
+                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic" data-key="reviews.sarah">"Kualitas bahan sangat bagus dan desainnya selalu up to date. Jadi langganan deh di ZL!"</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-purple-600 font-bold">T</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Teh Amay</h4>
+                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic" data-key="reviews.teh">"Pelayanan cepat, packaging rapih, dan yang paling penting bajunya selalu sesuai ekspektasi!"</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-purple-600 font-bold">P</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Puspa Delima</h4>
+                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic" data-key="reviews.puspa">"Size chart sangat akurat dan bahan premium banget. Worth every penny!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-pink-400 to-purple-500 rounded-3xl p-12 text-center text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-16 -mt-16"></div>
+                <div class="absolute bottom-0 left-0 w-24 h-24 bg-white opacity-10 rounded-full -ml-12 -mb-12"></div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-4" data-key="promo.title">Special Promo!</h2>
+                    <p class="text-xl mb-6" data-key="promo.desc">Beli 2 gratis 1 untuk semua koleksi blouse!</p>
+                    <p class="text-lg mb-8" data-key="promo.terms">*Berlaku sampai akhir bulan, syarat dan ketentuan berlaku</p>
+                    <button id="claimPromoBtn" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg transform hover:scale-105" data-key="promo.claim">
+                        Claim Promo Sekarang!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Size Guide Quick Access -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl text-center card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 3h18v18H3V3zm16 16V5H5v14h14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2" data-key="features.size">Size Guide</h3>
+                    <p class="text-gray-600 text-sm" data-key="features.size.desc">Panduan ukuran lengkap</p>
+                    <button class="size-guide-btn mt-2 text-purple-600 text-sm hover:text-purple-800 transition duration-300" data-key="features.size.btn">Lihat Guide</button>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19,7C19,6.4 18.6,6 18,6C17.4,6 17,6.4 17,7H7V6C7,4.9 7.9,4 9,4H15C16.1,4 17,4.9 17,6V7C18.7,7 20,8.3 20,10V16C20,17.7 18.7,19 17,19H7C5.3,19 4,17.7 4,16V10C4,8.3 5.3,7 7,7H17ZM9,6V7H15V6H9ZM18,10C18,9.4 17.6,9 17,9H7C6.4,9 6,9.4 6,10V16C6,16.6 6.4,17 7,17H17C17.6,17 18,16.6 18,16V10Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2" data-key="features.shipping">Free Shipping</h3>
+                    <p class="text-gray-600 text-sm" data-key="features.shipping.desc">Gratis ongkir min. 200K</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M10,17L15,12L10,7V17Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2" data-key="features.return">Easy Return</h3>
+                    <p class="text-gray-600 text-sm" data-key="features.return.desc">Return mudah 7 hari</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M21,4H3A2,2 0 0,0 1,6V18A2,2 0 0,0 3,20H21A2,2 0 0,0 23,18V6A2,2 0 0,0 21,4M21,18H3V6H21V18M16,10V12H14V14H12V12H10V10H12V8H14V10H16Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-4" data-key="features.payment">Secure Payment</h3>
+                    
+                    <!-- Payment Methods Grid -->
+                    <div class="grid grid-cols-3 gap-2 mb-4 payment-grid">
+                        <!-- Row 1 -->
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="h-4 w-auto max-w-16 object-contain" />
+                        </div>
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard" class="h-4 w-auto max-w-16 object-contain" />
+                        </div>
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/JCB_logo.svg" alt="JCB" class="h-4 w-auto max-w-16 object-contain" />
+                        </div>
+                        
+                        <!-- Row 2 -->
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/UnionPay_logo.svg" alt="UnionPay" class="h-4 w-auto max-w-16 object-contain" />
+                        </div>
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Bitcoin_logo.svg" alt="Bitcoin" class="h-4 w-auto max-w-16 object-contain" />
+                        </div>
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Pay_Logo_%282020%29.svg" alt="Google Pay" class="h-4 w-auto max-w-16 object-contain" />
+                        </div>
+                        
+                        <!-- Row 3 -->
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Samsung_Pay_icon.svg" alt="Samsung Pay" class="h-4 w-auto max-w-16 object-contain" />
+                        </div>
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <div class="text-blue-600 font-medium text-sm">AliPay</div>
+                        </div>
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <div class="text-purple-600 font-medium text-sm">Stripe</div>
+                        </div>
+                        
+                        <!-- Row 4 -->
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <img src="https://upload.wikimedia.org/wikipedia/id/5/55/BNI_logo.svg" alt="Bank BNI" class="h-4 w-auto max-w-16 object-contain" />
+                        </div>
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/BCA_Digital_logo.svg" alt="Bank BCA" class="h-4 w-auto max-w-16 object-contain" />
+                        </div>
+                        <div class="flex justify-center items-center h-10 bg-gray-50 rounded-lg border">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/BRI_2020.svg" alt="Bank BRI" class="h-4 w-auto max-w-16 object-contain" />
+                        </div>
+                    </div>
+                    
+                    <!-- PayPal -->
+                    <div class="flex justify-center mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="h-6 w-auto" />
+                    </div>
+                    
+                    <!-- Crypto Logos Grid -->
+                    <div class="grid grid-cols-5 gap-2 items-center justify-items-center opacity-80 hover:opacity-100 transition-opacity duration-500">
+                        <!-- Ethereum -->
+                        <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
+                            <img src="https://raw.githubusercontent.com/kongali1720/flash_loan_arbitrage_strategy/main/eth.png" alt="Ethereum" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
+                        </div>
+                        
+                        <!-- Aave -->
+                        <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
+                            <img src="https://raw.githubusercontent.com/kongali1720/flash_loan_arbitrage_strategy/main/aave.png" alt="Aave" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
+                        </div>
+                        
+                        <!-- Uniswap -->
+                        <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
+                            <img src="https://raw.githubusercontent.com/kongali1720/flash_loan_arbitrage_strategy/main/uniswap.png" alt="Uniswap" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
+                        </div>
+                        
+                        <!-- USDC -->
+                        <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
+                            <img src="https://raw.githubusercontent.com/kongali1720/flash_loan_arbitrage_strategy/main/usdc.png" alt="USDC" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
+                        </div>
+                        
+                        <!-- BNB -->
+                        <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
+                            <img src="https://raw.githubusercontent.com/kongali1720/flash_loan_arbitrage_strategy/main/bnb.png" alt="BNB" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 text-xs mt-2" data-key="features.payment.desc">& 100+ metode pembayaran lainnya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-4" data-key="contact.title">Hubungi Kami</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-key="contact.subtitle">
+                    Siap membantu Anda menemukan outfit perfect untuk setiap momen
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 contact-grid-mobile">
+                <div class="text-center">
+                    <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" data-key="contact.address">Alamat</h3>
+                    <a href="https://maps.google.com/?q=Jl.+Fashion+Street+No.+123,+Kota+Baru+Parahyangan,+Bandung,+40454" target="_blank" class="text-gray-300 hover:text-white transition duration-300 cursor-pointer block">
+                        Jl. Fashion Street No. 123<br>Kota Baru Parahyangan<br>Bandung, 40454
+                        <span class="text-sm text-purple-300 block mt-1">📍 Lihat di Google Maps</span>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" data-key="contact.whatsapp">WhatsApp</h3>
+                    <div class="text-gray-300 space-y-2">
+                        <a href="https://wa.me/6281234567890" target="_blank" class="block hover:text-white transition duration-300 cursor-pointer">
+                            💬 +62 812 3456 7890
+                            <span class="text-sm text-green-300 block">Klik untuk chat langsung</span>
+                        </a>
+                        <a href="https://wa.me/62215678901" target="_blank" class="block hover:text-white transition duration-300 cursor-pointer">
+                            🎧 +62 21 5678 9012
+                            <span class="text-sm text-green-300 block">Customer Service 24/7</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" data-key="contact.email">Email</h3>
+                    <div class="text-gray-300 space-y-2">
+                        <a href="mailto:info@zlcloth.com?subject=Inquiry%20ZL%20CLOTH%20INDUSTRIES&body=Halo%20ZL%20CLOTH%20INDUSTRIES,%0D%0A%0D%0ASaya%20tertarik%20dengan%20produk%20Anda.%20Mohon%20informasi%20lebih%20lanjut.%0D%0A%0D%0ATerima%20kasih." class="block hover:text-white transition duration-300 cursor-pointer">
+                            📧 info@zlcloth.com
+                            <span class="text-sm text-blue-300 block">General Information</span>
+                        </a>
+                        <a href="mailto:support@zlcloth.com?subject=Customer%20Support%20Request&body=Halo%20Support%20Team,%0D%0A%0D%0ASaya%20membutuhkan%20bantuan%20terkait:%0D%0A%0D%0ATerima%20kasih." class="block hover:text-white transition duration-300 cursor-pointer">
+                            🎧 support@zlcloth.com
+                            <span class="text-sm text-blue-300 block">Customer Support</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 footer-grid-mobile">
+                <div>
+                    <h3 class="text-3xl font-playfair font-bold mb-4">ZL</h3>
+                    <p class="text-gray-300 mb-4">CLOTH</p>
+                    <p class="text-gray-400" data-key="footer.brand">Fashion wanita berkualitas untuk gaya hidup modern.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-key="footer.products">Produk</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#koleksi" class="category-link hover:text-white transition duration-300" data-category="dress">Dress</a></li>
+                        <li><a href="#koleksi" class="category-link hover:text-white transition duration-300" data-category="blouse">Blouse</a></li>
+                        <li><a href="#koleksi" class="category-link hover:text-white transition duration-300" data-category="jumpsuit">Jumpsuit</a></li>
+                        <li><a href="#koleksi" class="category-link hover:text-white transition duration-300" data-category="accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-key="footer.services">Layanan</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="service-link hover:text-white transition duration-300" data-service="size-guide">Size Guide</a></li>
+                        <li><a href="#" class="service-link hover:text-white transition duration-300" data-service="shipping">Shipping Info</a></li>
+                        <li><a href="#" class="service-link hover:text-white transition duration-300" data-service="return">Return Policy</a></li>
+                        <li><a href="#kontak" class="service-link hover:text-white transition duration-300" data-service="customer-care">Customer Care</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-key="footer.follow">Follow Us</h4>
+                    <div class="grid grid-cols-2 gap-3 md:gap-3">
+                        <a href="https://instagram.com/zlclothindustries" target="_blank" class="social-link flex items-center text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            Instagram
+                        </a>
+                        <a href="https://twitter.com/zlclothindustries" target="_blank" class="social-link flex items-center text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                            Twitter
+                        </a>
+                        <a href="https://facebook.com/zlclothindustries" target="_blank" class="social-link flex items-center text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            Facebook
+                        </a>
+                        <a href="https://wa.me/6281234567890" target="_blank" class="social-link flex items-center text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488"/>
+                            </svg>
+                            WhatsApp
+                        </a>
+                        <a href="#" class="flex items-center text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                            TikTok
+                        </a>
+                        <a href="#" class="flex items-center text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0190 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/>
+                            </svg>
+                            Discord
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p data-key="footer.copyright">&copy; 2024 ZL CLOTH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        // Smooth scrolling untuk navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        let isMenuOpen = false;
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                isMenuOpen = !isMenuOpen;
+                
+                if (isMenuOpen) {
+                    // Open menu
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.style.opacity = '0';
+                    mobileMenu.style.transform = 'translateY(-10px)';
+                    
+                    // Animate menu appearance
+                    setTimeout(() => {
+                        mobileMenu.style.transition = 'all 0.3s ease';
+                        mobileMenu.style.opacity = '1';
+                        mobileMenu.style.transform = 'translateY(0)';
+                    }, 10);
+                    
+                    // Animate hamburger to X
+                    const lines = mobileMenuBtn.querySelectorAll('span.block');
+                    lines[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                    lines[1].style.opacity = '0';
+                    lines[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+                    
+                    // Add backdrop blur effect
+                    mobileMenuBtn.style.background = 'rgba(147, 51, 234, 0.3)';
+                    mobileMenuBtn.style.borderColor = '#8b5cf6';
+                } else {
+                    // Close menu
+                    mobileMenu.style.opacity = '0';
+                    mobileMenu.style.transform = 'translateY(-10px)';
+                    
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                    }, 300);
+                    
+                    // Reset hamburger
+                    const lines = mobileMenuBtn.querySelectorAll('span.block');
+                    lines[0].style.transform = '';
+                    lines[1].style.opacity = '1';
+                    lines[2].style.transform = '';
+                    
+                    // Reset button style
+                    mobileMenuBtn.style.background = 'rgba(147, 51, 234, 0.2)';
+                    mobileMenuBtn.style.borderColor = '#a855f7';
+                }
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (isMenuOpen && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    mobileMenuBtn.click();
+                }
+            });
+
+            // Close menu when clicking menu links
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (isMenuOpen) {
+                        setTimeout(() => {
+                            mobileMenuBtn.click();
+                        }, 100);
+                    }
+                });
+            });
+
+            // Add ripple effect to menu items
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const ripple = document.createElement('div');
+                    ripple.className = 'absolute bg-purple-400 rounded-full opacity-50';
+                    ripple.style.width = ripple.style.height = '20px';
+                    ripple.style.left = (e.clientX - this.offsetLeft - 10) + 'px';
+                    ripple.style.top = (e.clientY - this.offsetTop - 10) + 'px';
+                    ripple.style.transform = 'scale(0)';
+                    ripple.style.transition = 'transform 0.6s ease';
+                    
+                    this.style.position = 'relative';
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.style.transform = 'scale(4)';
+                        ripple.style.opacity = '0';
+                    }, 10);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Live counter animation
+        function animateCounter(elementId, target, duration = 2000) {
+            const element = document.getElementById(elementId);
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 16);
+        }
+
+        // Start counters when page loads
+        setTimeout(() => {
+            animateCounter('visitorsCount', 1247);
+            animateCounter('ordersToday', 89);
+        }, 1000);
+
+        // Add some dynamic effects
+        setInterval(() => {
+            const visitors = document.getElementById('visitorsCount');
+            const orders = document.getElementById('ordersToday');
+            
+            // Randomly update visitors count
+            if (Math.random() > 0.7) {
+                const currentCount = parseInt(visitors.textContent.replace(',', ''));
+                const change = Math.floor(Math.random() * 5) - 2; // -2 to +2
+                visitors.textContent = (currentCount + change).toLocaleString();
+            }
+            
+            // Randomly update orders count
+            if (Math.random() > 0.8) {
+                const currentOrders = parseInt(orders.textContent);
+                orders.textContent = currentOrders + 1;
+            }
+        }, 5000);
+
+        // Newsletter subscription
+        document.querySelector('input[type="email"]').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const email = this.value;
+                if (email) {
+                    alert('Terima kasih! Anda akan mendapatkan update terbaru dari ZL CLOTH INDUSTRIES.');
+                    this.value = '';
+                }
+            }
+        });
+
+        // Interactive Hero Buttons
+        document.getElementById('exploreCollectionBtn').addEventListener('click', function() {
+            // Smooth scroll to koleksi section
+            document.getElementById('koleksi').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Add visual feedback
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+            
+            // Highlight collection cards with animation
+            setTimeout(() => {
+                const cards = document.querySelectorAll('#koleksi .card-hover');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.transform = 'translateY(-5px)';
+                        card.style.boxShadow = '0 20px 40px -12px rgba(147, 51, 234, 0.3)';
+                        setTimeout(() => {
+                            card.style.transform = '';
+                            card.style.boxShadow = '';
+                        }, 1000);
+                    }, index * 200);
+                });
+            }, 800);
+        });
+
+        document.getElementById('seeTrendingBtn').addEventListener('click', function() {
+            // Smooth scroll to trending section
+            document.getElementById('trending').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Add visual feedback
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+            
+            // Highlight trending content with pulse effect
+            setTimeout(() => {
+                const trendingCards = document.querySelectorAll('#trending .bg-white');
+                trendingCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.animation = 'pulse 1s ease-in-out';
+                        card.style.border = '2px solid #ec4899';
+                        setTimeout(() => {
+                            card.style.animation = '';
+                            card.style.border = '';
+                        }, 2000);
+                    }, index * 300);
+                });
+            }, 800);
+        });
+
+        // All Button Functionality
+        
+        // Product Detail Buttons
+        document.querySelectorAll('.product-detail-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const product = this.getAttribute('data-product');
+                const productInfo = {
+                    'dress-casual': {
+                        name: 'Dress Casual Elegan',
+                        price: 'Rp 299K',
+                        description: 'Dress elegan dengan bahan premium, cocok untuk acara formal maupun santai. Tersedia dalam berbagai ukuran dan warna.',
+                        sizes: 'S, M, L, XL',
+                        colors: 'Navy, Black, Maroon, Dusty Pink'
+                    },
+                    'blouse-trendy': {
+                        name: 'Blouse Trendy',
+                        price: 'Rp 199K',
+                        description: 'Blouse modern dengan desain contemporary, perfect untuk office look yang stylish dan professional.',
+                        sizes: 'S, M, L, XL',
+                        colors: 'White, Light Blue, Soft Pink, Cream'
+                    },
+                    'jumpsuit-modern': {
+                        name: 'Jumpsuit Modern',
+                        price: 'Rp 399K',
+                        description: 'Jumpsuit statement piece dengan cutting yang flattering, memberikan kesan confident dan chic.',
+                        sizes: 'S, M, L, XL',
+                        colors: 'Black, Emerald, Navy, Burgundy'
+                    }
+                };
+                
+                const info = productInfo[product];
+                if (info) {
+                    alert(`✨ ${info.name} ✨\n\n💰 Harga: ${info.price}\n\n📝 Deskripsi: ${info.description}\n\n📏 Ukuran: ${info.sizes}\n\n🎨 Warna: ${info.colors}\n\n💬 Hubungi WhatsApp: +62 812 3456 7890 untuk order!`);
+                }
+                
+                // Add click animation
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Newsletter Subscription
+        const subscribeBtn = document.getElementById('subscribeBtn');
+        const newsletterEmail = document.getElementById('newsletterEmail');
+        
+        function handleSubscription() {
+            const email = newsletterEmail.value.trim();
+            if (email && email.includes('@')) {
+                alert(`🎉 Terima kasih ${email}!\n\nAnda telah berlangganan newsletter ZL CLOTH INDUSTRIES.\n\n✅ Dapatkan update koleksi terbaru\n✅ Promo eksklusif subscriber\n✅ Fashion tips & trends\n\nCheck email Anda untuk konfirmasi!`);
+                newsletterEmail.value = '';
+                
+                // Success animation
+                subscribeBtn.style.background = '#10B981';
+                subscribeBtn.textContent = '✓ Subscribed!';
+                setTimeout(() => {
+                    subscribeBtn.style.background = '';
+                    subscribeBtn.textContent = 'Subscribe';
+                }, 2000);
+            } else {
+                alert('❌ Mohon masukkan email yang valid!');
+                newsletterEmail.focus();
+            }
+        }
+        
+        subscribeBtn.addEventListener('click', handleSubscription);
+        newsletterEmail.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                handleSubscription();
+            }
+        });
+
+        // Claim Promo Button
+        document.getElementById('claimPromoBtn').addEventListener('click', function() {
+            alert(`🎁 PROMO SPESIAL ACTIVATED! 🎁\n\n✨ BELI 2 GRATIS 1 untuk semua koleksi blouse!\n\n📅 Berlaku sampai akhir bulan\n💳 Minimum pembelian Rp 500K\n🚚 Free ongkir ke seluruh Indonesia\n\n💬 Langsung order via WhatsApp:\n+62 812 3456 7890\n\n🔥 Sebutkan kode: PROMO2024`);
+            
+            // Promo animation
+            this.style.background = 'linear-gradient(45deg, #10B981, #059669)';
+            this.style.color = 'white';
+            this.textContent = '🎉 Promo Claimed!';
+            setTimeout(() => {
+                this.style.background = '';
+                this.style.color = '';
+                this.textContent = 'Claim Promo Sekarang!';
+            }, 3000);
+        });
+
+        // Size Guide Button
+        document.querySelector('.size-guide-btn').addEventListener('click', function() {
+            alert(`📏 SIZE GUIDE ZL CLOTH 📏\n\n👗 DRESS & BLOUSE:\n• S: Lingkar Dada 88cm, Panjang 95cm\n• M: Lingkar Dada 92cm, Panjang 97cm\n• L: Lingkar Dada 96cm, Panjang 99cm\n• XL: Lingkar Dada 100cm, Panjang 101cm\n\n👔 JUMPSUIT:\n• S: Lingkar Dada 86cm, Panjang 150cm\n• M: Lingkar Dada 90cm, Panjang 152cm\n• L: Lingkar Dada 94cm, Panjang 154cm\n• XL: Lingkar Dada 98cm, Panjang 156cm\n\n💡 Tips: Ukur lingkar dada saat menggunakan bra, untuk hasil yang akurat!`);
+        });
+
+        // Category Links in Footer
+        document.querySelectorAll('.category-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.getAttribute('data-category');
+                
+                // Scroll to collection section
+                document.getElementById('koleksi').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Highlight relevant category
+                setTimeout(() => {
+                    alert(`🔍 Menampilkan koleksi ${category.toUpperCase()}\n\n✨ Lihat produk-produk ${category} terbaru kami di section Koleksi Unggulan!\n\n💬 Untuk katalog lengkap ${category}, hubungi WhatsApp: +62 812 3456 7890`);
+                }, 1000);
+            });
+        });
+
+        // Service Links in Footer
+        document.querySelectorAll('.service-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const service = this.getAttribute('data-service');
+                
+                const serviceInfo = {
+                    'size-guide': '📏 SIZE GUIDE\n\nPanduan lengkap ukuran untuk semua produk ZL CLOTH. Ukur dengan teliti untuk mendapatkan fit yang perfect!',
+                    'shipping': '🚚 SHIPPING INFO\n\n• JNE, J&T, SiCepat tersedia\n• Free ongkir min. Rp 200K\n• Estimasi 2-4 hari kerja\n• Same day delivery (Jakarta)',
+                    'return': '🔄 RETURN POLICY\n\n• Return mudah dalam 7 hari\n• Barang belum dicuci/dipakai\n• Tag masih terpasang\n• Biaya return ditanggung customer',
+                    'customer-care': '💬 CUSTOMER CARE\n\nTeam customer service kami siap membantu Anda 24/7!'
+                };
+                
+                if (serviceInfo[service]) {
+                    alert(serviceInfo[service] + '\n\n💬 WhatsApp: +62 812 3456 7890\n📧 Email: support@zlcloth.com');
+                }
+            });
+        });
+
+        // Social Media Links with Analytics
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const platform = this.href.includes('instagram') ? 'Instagram' : 
+                               this.href.includes('facebook') ? 'Facebook' :
+                               this.href.includes('twitter') ? 'Twitter' :
+                               this.href.includes('wa.me') ? 'WhatsApp' : 'Social Media';
+                
+                // Add click tracking
+                console.log(`User clicked ${platform} link`);
+                
+                // Add visual feedback
+                this.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+            });
+        });
+
+        // Multi-language translations
+        const translations = {
+            id: {
+                'nav.home': 'Beranda',
+                'nav.collection': 'Koleksi',
+                'nav.trending': 'Trending',
+                'nav.about': 'Tentang',
+                'nav.contact': 'Kontak',
+                'hero.subtitle': 'Fashion Wanita Trendy untuk Gaya Hidup Modern',
+                'hero.explore': 'Jelajahi Koleksi',
+                'hero.trending': 'Lihat Trending',
+                'hero.online': 'Online Sekarang',
+                'hero.orders': 'Pesanan Hari Ini',
+                'collection.title': 'Koleksi Unggulan',
+                'collection.subtitle': 'Temukan pakaian wanita terbaru dengan desain eksklusif dan kualitas premium',
+                'product.detail': 'Detail',
+                'product.dress': 'Dress Casual Elegan',
+                'product.blouse': 'Blouse Trendy',
+                'product.jumpsuit': 'Jumpsuit Modern',
+                'product.dress.desc': 'Perfect untuk acara santai maupun formal',
+                'product.blouse.desc': 'Kombinasi sempurna untuk look profesional',
+                'product.jumpsuit.desc': 'Statement piece untuk tampil percaya diri',
+                'trending.title': 'Trending Sekarang',
+                'trending.subtitle': 'Ikuti tren fashion terkini yang sedang populer di kalangan wanita modern',
+                'trending.blazer': '🌟 Oversized Blazer',
+                'trending.blazer.desc': 'Trend blazer oversized yang memberikan kesan professional namun tetap stylish untuk berbagai occasion.',
+                'trending.skirt': '✨ Midi Skirt',
+                'trending.skirt.desc': 'Rok midi dengan berbagai motif dan warna yang cocok untuk gaya feminin dan elegan.',
+                'trending.crop': '💫 Crop Top Sets',
+                'trending.crop.desc': 'Set crop top yang trendy dan versatile, perfect untuk look casual maupun semi-formal.',
+                'about.title': 'Tentang ZL CLOTH',
+                'about.desc1': 'ZL CLOTH adalah brand fashion wanita yang berkomitmen menghadirkan pakaian berkualitas tinggi dengan desain yang mengikuti tren terkini. Kami percaya bahwa setiap wanita berhak tampil percaya diri dengan style yang unik.',
+                'about.desc2': 'Dengan pengalaman bertahun-tahun di industri fashion, kami terus berinovasi untuk memberikan koleksi terbaik yang memadukan kenyamanan, kualitas, dan gaya modern.',
+                'about.products': 'Produk Berkualitas',
+                'about.customers': 'Pelanggan Puas',
+                'newsletter.title': 'Tetap Update',
+                'newsletter.subtitle': 'Dapatkan info terbaru tentang koleksi dan promo eksklusif!',
+                'newsletter.subscribe': 'Subscribe',
+                'newsletter.placeholder': 'Alamat email',
+                'reviews.title': 'Kata Pelanggan Kami',
+                'reviews.subtitle': 'Testimoni dari para fashionista yang sudah merasakan kualitas ZL',
+                'reviews.sarah': '"Kualitas bahan sangat bagus dan desainnya selalu up to date. Jadi langganan deh di ZL!"',
+                'reviews.teh': '"Pelayanan cepat, packaging rapih, dan yang paling penting bajunya selalu sesuai ekspektasi!"',
+                'reviews.puspa': '"Size chart sangat akurat dan bahan premium banget. Worth every penny!"',
+                'promo.title': 'Promo Spesial!',
+                'promo.desc': 'Beli 2 gratis 1 untuk semua koleksi blouse!',
+                'promo.terms': '*Berlaku sampai akhir bulan, syarat dan ketentuan berlaku',
+                'promo.claim': 'Claim Promo Sekarang!',
+                'features.size': 'Size Guide',
+                'features.size.desc': 'Panduan ukuran lengkap',
+                'features.size.btn': 'Lihat Guide',
+                'features.shipping': 'Free Shipping',
+                'features.shipping.desc': 'Gratis ongkir min. 200K',
+                'features.return': 'Easy Return',
+                'features.return.desc': 'Return mudah 7 hari',
+                'features.payment': 'Secure Payment',
+                'features.payment.desc': '& 100+ metode pembayaran lainnya',
+                'contact.title': 'Hubungi Kami',
+                'contact.subtitle': 'Siap membantu Anda menemukan outfit perfect untuk setiap momen',
+                'contact.address': 'Alamat',
+                'contact.whatsapp': 'WhatsApp',
+                'contact.email': 'Email',
+                'footer.brand': 'Fashion wanita berkualitas untuk gaya hidup modern.',
+                'footer.products': 'Produk',
+                'footer.services': 'Layanan',
+                'footer.follow': 'Follow Us',
+                'footer.copyright': '© 2024 ZL CLOTH. All rights reserved.'
+            },
+            en: {
+                'nav.home': 'Home',
+                'nav.collection': 'Collection',
+                'nav.trending': 'Trending',
+                'nav.about': 'About',
+                'nav.contact': 'Contact',
+                'hero.subtitle': 'Trendy Women\'s Fashion for Modern Lifestyle',
+                'hero.explore': 'Explore Collection',
+                'hero.trending': 'See Trending',
+                'hero.online': 'Online Now',
+                'hero.orders': 'Orders Today',
+                'collection.title': 'Featured Collection',
+                'collection.subtitle': 'Discover the latest women\'s clothing with exclusive designs and premium quality',
+                'product.detail': 'Details',
+                'product.dress': 'Elegant Casual Dress',
+                'product.blouse': 'Trendy Blouse',
+                'product.jumpsuit': 'Modern Jumpsuit',
+                'product.dress.desc': 'Perfect for casual or formal events',
+                'product.blouse.desc': 'Perfect combination for professional look',
+                'product.jumpsuit.desc': 'Statement piece to look confident',
+                'trending.title': 'Trending Now',
+                'trending.subtitle': 'Follow the latest fashion trends popular among modern women',
+                'trending.blazer': '🌟 Oversized Blazer',
+                'trending.blazer.desc': 'Oversized blazer trend that gives a professional yet stylish impression for various occasions.',
+                'trending.skirt': '✨ Midi Skirt',
+                'trending.skirt.desc': 'Midi skirts with various patterns and colors suitable for feminine and elegant style.',
+                'trending.crop': '💫 Crop Top Sets',
+                'trending.crop.desc': 'Trendy and versatile crop top sets, perfect for casual or semi-formal looks.',
+                'about.title': 'About ZL CLOTH',
+                'about.desc1': 'ZL CLOTH is a women\'s fashion brand committed to providing high-quality clothing with designs that follow the latest trends. We believe that every woman deserves to appear confident with a unique style.',
+                'about.desc2': 'With years of experience in the fashion industry, we continue to innovate to provide the best collections that combine comfort, quality, and modern style.',
+                'about.products': 'Quality Products',
+                'about.customers': 'Satisfied Customers',
+                'newsletter.title': 'Stay Updated',
+                'newsletter.subtitle': 'Get the latest info about collections and exclusive promos!',
+                'newsletter.subscribe': 'Subscribe',
+                'newsletter.placeholder': 'Email address',
+                'reviews.title': 'What Our Customers Say',
+                'reviews.subtitle': 'Testimonials from fashionistas who have experienced ZL quality',
+                'reviews.sarah': '"The material quality is very good and the designs are always up to date. I\'m a regular customer at ZL!"',
+                'reviews.teh': '"Fast service, neat packaging, and most importantly the clothes always meet expectations!"',
+                'reviews.puspa': '"Size chart is very accurate and the material is really premium. Worth every penny!"',
+                'promo.title': 'Special Promo!',
+                'promo.desc': 'Buy 2 get 1 free for all blouse collections!',
+                'promo.terms': '*Valid until end of month, terms and conditions apply',
+                'promo.claim': 'Claim Promo Now!',
+                'features.size': 'Size Guide',
+                'features.size.desc': 'Complete size guide',
+                'features.size.btn': 'View Guide',
+                'features.shipping': 'Free Shipping',
+                'features.shipping.desc': 'Free shipping min. 200K',
+                'features.return': 'Easy Return',
+                'features.return.desc': 'Easy return 7 days',
+                'features.payment': 'Secure Payment',
+                'features.payment.desc': '& 100+ other payment methods',
+                'contact.title': 'Contact Us',
+                'contact.subtitle': 'Ready to help you find the perfect outfit for every moment',
+                'contact.address': 'Address',
+                'contact.whatsapp': 'WhatsApp',
+                'contact.email': 'Email',
+                'footer.brand': 'Quality women\'s fashion for modern lifestyle.',
+                'footer.products': 'Products',
+                'footer.services': 'Services',
+                'footer.follow': 'Follow Us',
+                'footer.copyright': '© 2024 ZL CLOTH. All rights reserved.'
+            },
+            jp: {
+                'nav.home': 'ホーム',
+                'nav.collection': 'コレクション',
+                'nav.trending': 'トレンド',
+                'nav.about': '会社概要',
+                'nav.contact': 'お問い合わせ',
+                'hero.subtitle': 'モダンライフスタイルのためのトレンディな女性ファッション',
+                'hero.explore': 'コレクションを見る',
+                'hero.trending': 'トレンドを見る',
+                'hero.online': 'オンライン中',
+                'hero.orders': '本日の注文',
+                'collection.title': 'おすすめコレクション',
+                'collection.subtitle': '独占デザインとプレミアム品質の最新女性服を発見してください',
+                'product.detail': '詳細',
+                'product.dress': 'エレガントカジュアルドレス',
+                'product.blouse': 'トレンディブラウス',
+                'product.jumpsuit': 'モダンジャンプスーツ',
+                'product.dress.desc': 'カジュアルまたはフォーマルなイベントに最適',
+                'product.blouse.desc': 'プロフェッショナルルックの完璧な組み合わせ',
+                'product.jumpsuit.desc': '自信を持って見えるステートメントピース',
+                'trending.title': '今のトレンド',
+                'trending.subtitle': 'モダンな女性に人気の最新ファッショントレンドをフォロー',
+                'trending.blazer': '🌟 オーバーサイズブレザー',
+                'trending.blazer.desc': 'さまざまな機会にプロフェッショナルでありながらスタイリッシュな印象を与えるオーバーサイズブレザートレンド。',
+                'trending.skirt': '✨ ミディスカート',
+                'trending.skirt.desc': 'フェミニンでエレガントなスタイルに適したさまざまなパターンと色のミディスカート。',
+                'trending.crop': '💫 クロップトップセット',
+                'trending.crop.desc': 'トレンディで多用途なクロップトップセット、カジュアルまたはセミフォーマルなルックに最適。',
+                'about.title': 'ZL CLOTHについて',
+                'about.desc1': 'ZL CLOTHは、最新のトレンドに従ったデザインで高品質の衣類を提供することにコミットした女性ファッションブランドです。すべての女性がユニークなスタイルで自信を持って現れる権利があると信じています。',
+                'about.desc2': 'ファッション業界での長年の経験により、快適性、品質、現代的なスタイルを組み合わせた最高のコレクションを提供するために革新を続けています。',
+                'about.products': '品質製品',
+                'about.customers': '満足顧客',
+                'newsletter.title': '最新情報をキープ',
+                'newsletter.subtitle': 'コレクションと限定プロモの最新情報をゲット！',
+                'newsletter.subscribe': '購読する',
+                'newsletter.placeholder': 'メールアドレス',
+                'reviews.title': 'お客様の声',
+                'reviews.subtitle': 'ZLの品質を体験したファッショニスタからの証言',
+                'reviews.sarah': '"素材の品質がとても良く、デザインはいつも最新です。ZLで常連客です！"',
+                'reviews.teh': '"迅速なサービス、きちんとした包装、そして最も重要なことは、服が常に期待に応えることです！"',
+                'reviews.puspa': '"サイズチャートは非常に正確で、素材は本当にプレミアムです。すべてのペニーに値する！"',
+                'promo.title': 'スペシャルプロモ！',
+                'promo.desc': 'すべてのブラウスコレクションで2つ買うと1つ無料！',
+                'promo.terms': '*月末まで有効、利用規約が適用されます',
+                'promo.claim': '今すぐプロモをクレーム！',
+                'features.size': 'サイズガイド',
+                'features.size.desc': '完全なサイズガイド',
+                'features.size.btn': 'ガイドを見る',
+                'features.shipping': '送料無料',
+                'features.shipping.desc': '200K以上で送料無料',
+                'features.return': '簡単返品',
+                'features.return.desc': '7日間簡単返品',
+                'features.payment': '安全な支払い',
+                'features.payment.desc': '& 100以上の他の支払い方法',
+                'contact.title': 'お問い合わせ',
+                'contact.subtitle': 'あらゆる瞬間に完璧な服装を見つけるお手伝いをします',
+                'contact.address': '住所',
+                'contact.whatsapp': 'WhatsApp',
+                'contact.email': 'メール',
+                'footer.brand': 'モダンライフスタイルのための品質女性ファッション。',
+                'footer.products': '製品',
+                'footer.services': 'サービス',
+                'footer.follow': 'フォローする',
+                'footer.copyright': '© 2024 ZL CLOTH. All rights reserved.'
+            },
+            kr: {
+                'nav.home': '홈',
+                'nav.collection': '컬렉션',
+                'nav.trending': '트렌드',
+                'nav.about': '회사소개',
+                'nav.contact': '연락처',
+                'hero.subtitle': '현대적 라이프스타일을 위한 트렌디한 여성 패션',
+                'hero.explore': '컬렉션 탐색',
+                'hero.trending': '트렌드 보기',
+                'hero.online': '현재 온라인',
+                'hero.orders': '오늘 주문',
+                'collection.title': '추천 컬렉션',
+                'collection.subtitle': '독점 디자인과 프리미엄 품질의 최신 여성복을 만나보세요',
+                'product.detail': '상세정보',
+                'product.dress': '우아한 캐주얼 드레스',
+                'product.blouse': '트렌디 블라우스',
+                'product.jumpsuit': '모던 점프수트',
+                'product.dress.desc': '캐주얼 또는 포멀한 행사에 완벽',
+                'product.blouse.desc': '전문적인 룩을 위한 완벽한 조합',
+                'product.jumpsuit.desc': '자신감 있게 보이기 위한 스테이트먼트 피스',
+                'trending.title': '지금 트렌드',
+                'trending.subtitle': '현대 여성들 사이에서 인기 있는 최신 패션 트렌드를 따라해보세요',
+                'trending.blazer': '🌟 오버사이즈 블레이저',
+                'trending.blazer.desc': '다양한 상황에서 전문적이면서도 스타일리시한 인상을 주는 오버사이즈 블레이저 트렌드.',
+                'trending.skirt': '✨ 미디 스커트',
+                'trending.skirt.desc': '여성스럽고 우아한 스타일에 적합한 다양한 패턴과 색상의 미디 스커트.',
+                'trending.crop': '💫 크롭 탑 세트',
+                'trending.crop.desc': '트렌디하고 다재다능한 크롭 탑 세트, 캐주얼 또는 세미 포멀한 룩에 완벽.',
+                'about.title': 'ZL CLOTH 소개',
+                'about.desc1': 'ZL CLOTH는 최신 트렌드를 따르는 디자인으로 고품질 의류를 제공하는 데 전념하는 여성 패션 브랜드입니다. 모든 여성이 독특한 스타일로 자신감 있게 나타날 권리가 있다고 믿습니다.',
+                'about.desc2': '패션 업계에서의 수년간의 경험을 통해 편안함, 품질, 현대적 스타일을 결합한 최고의 컬렉션을 제공하기 위해 계속 혁신하고 있습니다.',
+                'about.products': '품질 제품',
+                'about.customers': '만족한 고객',
+                'newsletter.title': '최신 정보 받기',
+                'newsletter.subtitle': '컬렉션과 독점 프로모션의 최신 정보를 받아보세요!',
+                'newsletter.subscribe': '구독하기',
+                'newsletter.placeholder': '이메일 주소',
+                'reviews.title': '고객 후기',
+                'reviews.subtitle': 'ZL의 품질을 경험한 패셔니스타들의 증언',
+                'reviews.sarah': '"소재의 품질이 매우 좋고 디자인이 항상 최신입니다. ZL의 단골 고객입니다!"',
+                'reviews.teh': '"빠른 서비스, 깔끔한 포장, 그리고 가장 중요한 것은 옷이 항상 기대에 부응한다는 것입니다!"',
+                'reviews.puspa': '"사이즈 차트가 매우 정확하고 소재가 정말 프리미엄입니다. 모든 돈의 가치가 있습니다!"',
+                'promo.title': '스페셜 프로모!',
+                'promo.desc': '모든 블라우스 컬렉션에서 2개 구매시 1개 무료!',
+                'promo.terms': '*월말까지 유효, 이용 약관이 적용됩니다',
+                'promo.claim': '지금 프로모 받기!',
+                'features.size': '사이즈 가이드',
+                'features.size.desc': '완전한 사이즈 가이드',
+                'features.size.btn': '가이드 보기',
+                'features.shipping': '무료 배송',
+                'features.shipping.desc': '200K 이상 무료 배송',
+                'features.return': '간편 반품',
+                'features.return.desc': '7일 간편 반품',
+                'features.payment': '안전한 결제',
+                'features.payment.desc': '& 100개 이상의 다른 결제 방법',
+                'contact.title': '연락처',
+                'contact.subtitle': '모든 순간에 완벽한 의상을 찾는 데 도움을 드릴 준비가 되어 있습니다',
+                'contact.address': '주소',
+                'contact.whatsapp': 'WhatsApp',
+                'contact.email': '이메일',
+                'footer.brand': '현대적 라이프스타일을 위한 품질 여성 패션.',
+                'footer.products': '제품',
+                'footer.services': '서비스',
+                'footer.follow': '팔로우',
+                'footer.copyright': '© 2024 ZL CLOTH. All rights reserved.'
+            },
+            cn: {
+                'nav.home': '首页',
+                'nav.collection': '系列',
+                'nav.trending': '趋势',
+                'nav.about': '关于我们',
+                'nav.contact': '联系我们',
+                'hero.subtitle': '现代生活方式的时尚女装',
+                'hero.explore': '探索系列',
+                'hero.trending': '查看趋势',
+                'hero.online': '在线人数',
+                'hero.orders': '今日订单',
+                'collection.title': '精选系列',
+                'collection.subtitle': '发现独家设计和优质品质的最新女装',
+                'product.detail': '详情',
+                'product.dress': '优雅休闲连衣裙',
+                'product.blouse': '时尚衬衫',
+                'product.jumpsuit': '现代连体裤',
+                'product.dress.desc': '适合休闲或正式场合',
+                'product.blouse.desc': '专业造型的完美组合',
+                'product.jumpsuit.desc': '展现自信的亮点单品',
+                'trending.title': '现在流行',
+                'trending.subtitle': '跟随现代女性中流行的最新时尚趋势',
+                'trending.blazer': '🌟 超大号西装外套',
+                'trending.blazer.desc': '超大号西装外套趋势，在各种场合都能营造专业而时尚的印象。',
+                'trending.skirt': '✨ 中长裙',
+                'trending.skirt.desc': '适合女性优雅风格的各种图案和颜色的中长裙。',
+                'trending.crop': '💫 短上衣套装',
+                'trending.crop.desc': '时尚多用途的短上衣套装，适合休闲或半正式的造型。',
+                'about.title': '关于 ZL CLOTH',
+                'about.desc1': 'ZL CLOTH是一个致力于提供跟随最新趋势设计的高品质服装的女性时尚品牌。我们相信每个女性都有权以独特的风格自信地出现。',
+                'about.desc2': '凭借在时尚行业多年的经验，我们继续创新，提供结合舒适性、品质和现代风格的最佳系列。',
+                'about.products': '优质产品',
+                'about.customers': '满意客户',
+                'newsletter.title': '保持更新',
+                'newsletter.subtitle': '获取系列和独家促销的最新信息！',
+                'newsletter.subscribe': '订阅',
+                'newsletter.placeholder': '电子邮件地址',
+                'reviews.title': '客户评价',
+                'reviews.subtitle': '体验过ZL品质的时尚达人的证言',
+                'reviews.sarah': '"材料质量非常好，设计总是最新的。我是ZL的常客！"',
+                'reviews.teh': '"快速服务，包装整齐，最重要的是衣服总是符合期望！"',
+                'reviews.puspa': '"尺码表非常准确，材料真的很高档。物有所值！"',
+                'promo.title': '特别促销！',
+                'promo.desc': '所有衬衫系列买二送一！',
+                'promo.terms': '*有效期至月底，条款和条件适用',
+                'promo.claim': '立即获取促销！',
+                'features.size': '尺码指南',
+                'features.size.desc': '完整尺码指南',
+                'features.size.btn': '查看指南',
+                'features.shipping': '免费送货',
+                'features.shipping.desc': '满200K免费送货',
+                'features.return': '简易退货',
+                'features.return.desc': '7天简易退货',
+                'features.payment': '安全支付',
+                'features.payment.desc': '& 100多种其他支付方式',
+                'contact.title': '联系我们',
+                'contact.subtitle': '准备帮助您为每个时刻找到完美的装扮',
+                'contact.address': '地址',
+                'contact.whatsapp': 'WhatsApp',
+                'contact.email': '电子邮件',
+                'footer.brand': '现代生活方式的优质女性时尚。',
+                'footer.products': '产品',
+                'footer.services': '服务',
+                'footer.follow': '关注我们',
+                'footer.copyright': '© 2024 ZL CLOTH. All rights reserved.'
+            }
+        };
+
+        // Language functionality
+        let currentLanguage = localStorage.getItem('zlcloth-language') || 'id';
+        
+        function updateLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('zlcloth-language', lang);
+            
+            // Update all elements with data-key attributes
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update placeholders for input elements
+            document.querySelectorAll('[data-key-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-key-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    element.placeholder = translations[lang][key];
+                }
+            });
+            
+            // Update language selector display
+            const languageFlags = {
+                'id': '🇮🇩',
+                'en': '🇺🇸', 
+                'jp': '🇯🇵',
+                'kr': '🇰🇷',
+                'cn': '🇨🇳'
+            };
+            
+            const languageNames = {
+                'id': 'ID',
+                'en': 'EN',
+                'jp': 'JP',
+                'kr': 'KR',
+                'cn': 'CN'
+            };
+            
+            document.querySelector('.current-language-flag').textContent = languageFlags[lang];
+            document.querySelector('.current-language-text').textContent = languageNames[lang];
+            
+            // Add success notification
+            showLanguageNotification(lang);
+        }
+        
+        function showLanguageNotification(lang) {
+            const messages = {
+                'id': '🇮🇩 Bahasa berubah ke Bahasa Indonesia',
+                'en': '🇺🇸 Language changed to English',
+                'jp': '🇯🇵 言語が日本語に変更されました',
+                'kr': '🇰🇷 언어가 한국어로 변경되었습니다',
+                'cn': '🇨🇳 语言已更改为中文'
+            };
+            
+            // Create notification
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-20 right-4 bg-purple-600 text-white px-6 py-3 rounded-xl shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+            notification.textContent = messages[lang];
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Animate out and remove
+            setTimeout(() => {
+                notification.style.transform = 'translateX(full)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 2000);
+        }
+        
+        // Language selector functionality
+        const languageBtn = document.querySelector('.language-btn');
+        const languageDropdown = document.querySelector('.language-dropdown');
+        let isLanguageDropdownOpen = false;
+        
+        languageBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            isLanguageDropdownOpen = !isLanguageDropdownOpen;
+            
+            if (isLanguageDropdownOpen) {
+                languageDropdown.classList.remove('hidden');
+                languageDropdown.style.opacity = '0';
+                languageDropdown.style.transform = 'translateY(-10px)';
+                
+                setTimeout(() => {
+                    languageDropdown.style.transition = 'all 0.3s ease';
+                    languageDropdown.style.opacity = '1';
+                    languageDropdown.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                languageDropdown.style.opacity = '0';
+                languageDropdown.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    languageDropdown.classList.add('hidden');
+                }, 300);
+            }
+        });
+        
+        // Close language dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (isLanguageDropdownOpen && !languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+                languageBtn.click();
+            }
+        });
+        
+        // Language option clicks
+        document.querySelectorAll('.language-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const selectedLang = this.getAttribute('data-lang');
+                updateLanguage(selectedLang);
+                
+                // Close dropdown
+                if (isLanguageDropdownOpen) {
+                    languageBtn.click();
+                }
+                
+                // Add click animation
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+        
+        // Initialize with saved language
+        updateLanguage(currentLanguage);
+
+        // Add pulse animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.02); }
+                100% { transform: scale(1); }
+            }
+            
+            .hero-button-active {
+                background: linear-gradient(45deg, #ec4899, #8b5cf6) !important;
+                color: white !important;
+                box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3) !important;
+            }
+            
+            .collection-highlight {
+                border: 2px solid #ec4899 !important;
+                box-shadow: 0 25px 50px -12px rgba(236, 72, 153, 0.25) !important;
+            }
+            
+            .product-detail-btn:hover {
+                box-shadow: 0 10px 25px rgba(147, 51, 234, 0.3) !important;
+            }
+            
+            .social-link:hover {
+                transform: translateY(-2px) !important;
+            }
+            
+            .language-selector {
+                position: relative;
+            }
+            
+            .language-dropdown {
+                backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.95);
+            }
+            
+            .language-option:hover {
+                background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(236, 72, 153, 0.1));
+            }
+            
+            .current-language-flag {
+                font-size: 1.2em;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
