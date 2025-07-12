@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -21,7 +22,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('keys/fashion-background?prompt=elegant%20minimalist%20fashion%20boutique%20interior%20with%20flowing%20fabrics%20and%20soft%20lighting') center/cover;
+            background: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200') center/cover;
             opacity: 0.3;
             z-index: 1;
         }
@@ -234,6 +235,48 @@
                 transform: translateY(-2px) scale(1.05);
             }
         }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        .hero-button-active {
+            background: linear-gradient(45deg, #ec4899, #8b5cf6) !important;
+            color: white !important;
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3) !important;
+        }
+        
+        .collection-highlight {
+            border: 2px solid #ec4899 !important;
+            box-shadow: 0 25px 50px -12px rgba(236, 72, 153, 0.25) !important;
+        }
+        
+        .product-detail-btn:hover {
+            box-shadow: 0 10px 25px rgba(147, 51, 234, 0.3) !important;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-2px) !important;
+        }
+        
+        .language-selector {
+            position: relative;
+        }
+        
+        .language-dropdown {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .language-option:hover {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(236, 72, 153, 0.1));
+        }
+        
+        .current-language-flag {
+            font-size: 1.2em;
+        }
     </style>
 </head>
 <body class="font-inter bg-gray-50">
@@ -411,7 +454,7 @@
                 <!-- Card 1 -->
                 <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
                     <div class="h-80 bg-gradient-to-br from-pink-200 to-pink-300 flex items-center justify-center">
-                        <img src="keys/dress-casual?prompt=elegant%20casual%20dress%20for%20women%20modern%20style%20pastel%20colors" alt="Dress Casual" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=320&fit=crop" alt="Dress Casual" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2" data-key="product.dress">Dress Casual Elegan</h3>
@@ -428,7 +471,7 @@
                 <!-- Card 2 -->
                 <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
                     <div class="h-80 bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center">
-                        <img src="keys/blouse-trendy?prompt=trendy%20blouse%20for%20women%20modern%20office%20wear%20stylish" alt="Blouse Trendy" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=400&h=320&fit=crop" alt="Blouse Trendy" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2" data-key="product.blouse">Blouse Trendy</h3>
@@ -445,7 +488,7 @@
                 <!-- Card 3 -->
                 <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
                     <div class="h-80 bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center">
-                        <img src="keys/jumpsuit-modern?prompt=modern%20jumpsuit%20for%20women%20chic%20style%20contemporary%20fashion" alt="Jumpsuit Modern" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=320&fit=crop" alt="Jumpsuit Modern" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2" data-key="product.jumpsuit">Jumpsuit Modern</h3>
@@ -474,7 +517,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <img src="keys/trending-fashion?prompt=trendy%20women%20fashion%20collection%20modern%20stylish%20clothing%20display" alt="Trending Fashion" class="rounded-2xl shadow-2xl w-full">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&h=400&fit=crop" alt="Trending Fashion" class="rounded-2xl shadow-2xl w-full">
                 </div>
                 <div class="space-y-6">
                     <div class="bg-white p-6 rounded-xl shadow-lg">
@@ -518,7 +561,7 @@
                     </div>
                 </div>
                 <div>
-                    <img src="keys/brand-story?prompt=elegant%20fashion%20brand%20story%20women%20clothing%20boutique%20modern%20interior" alt="Brand Story" class="rounded-2xl shadow-2xl w-full">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop" alt="Brand Story" class="rounded-2xl shadow-2xl w-full">
                 </div>
             </div>
         </div>
@@ -703,27 +746,27 @@
                     <div class="grid grid-cols-5 gap-2 items-center justify-items-center opacity-80 hover:opacity-100 transition-opacity duration-500">
                         <!-- Ethereum -->
                         <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
-                            <img src="https://raw.githubusercontent.com/kongali1720/flash_loan_arbitrage_strategy/main/eth.png" alt="Ethereum" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
-                        </div>
-                        
-                        <!-- Aave -->
-                        <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
-                            <img src="https://raw.githubusercontent.com/kongali1720/flash_loan_arbitrage_strategy/main/aave.png" alt="Aave" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
-                        </div>
-                        
-                        <!-- Uniswap -->
-                        <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
-                            <img src="https://raw.githubusercontent.com/kongali1720/flash_loan_arbitrage_strategy/main/uniswap.png" alt="Uniswap" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
+                            <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png?v=025" alt="Ethereum" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
                         </div>
                         
                         <!-- USDC -->
                         <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
-                            <img src="https://raw.githubusercontent.com/kongali1720/flash_loan_arbitrage_strategy/main/usdc.png" alt="USDC" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
+                            <img src="https://cryptologos.cc/logos/usd-coin-usdc-logo.png?v=025" alt="USDC" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
+                        </div>
+                        
+                        <!-- Bitcoin -->
+                        <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
+                            <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=025" alt="Bitcoin" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
                         </div>
                         
                         <!-- BNB -->
                         <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
-                            <img src="https://raw.githubusercontent.com/kongali1720/flash_loan_arbitrage_strategy/main/bnb.png" alt="BNB" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
+                            <img src="https://cryptologos.cc/logos/bnb-bnb-logo.png?v=025" alt="BNB" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
+                        </div>
+                        
+                        <!-- Tether -->
+                        <div class="crypto-container w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-100 transition-all duration-300">
+                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=025" alt="USDT" class="w-6 h-6 drop-shadow-sm transition-all duration-300" />
                         </div>
                     </div>
                     
@@ -850,18 +893,6 @@
                             </svg>
                             WhatsApp
                         </a>
-                        <a href="#" class="flex items-center text-gray-400 hover:text-white transition duration-300">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                            TikTok
-                        </a>
-                        <a href="#" class="flex items-center text-gray-400 hover:text-white transition duration-300">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0190 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/>
-                            </svg>
-                            Discord
-                        </a>
                     </div>
                 </div>
             </div>
@@ -897,29 +928,24 @@
                 isMenuOpen = !isMenuOpen;
                 
                 if (isMenuOpen) {
-                    // Open menu
                     mobileMenu.classList.remove('hidden');
                     mobileMenu.style.opacity = '0';
                     mobileMenu.style.transform = 'translateY(-10px)';
                     
-                    // Animate menu appearance
                     setTimeout(() => {
                         mobileMenu.style.transition = 'all 0.3s ease';
                         mobileMenu.style.opacity = '1';
                         mobileMenu.style.transform = 'translateY(0)';
                     }, 10);
                     
-                    // Animate hamburger to X
                     const lines = mobileMenuBtn.querySelectorAll('span.block');
                     lines[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
                     lines[1].style.opacity = '0';
                     lines[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
                     
-                    // Add backdrop blur effect
                     mobileMenuBtn.style.background = 'rgba(147, 51, 234, 0.3)';
                     mobileMenuBtn.style.borderColor = '#8b5cf6';
                 } else {
-                    // Close menu
                     mobileMenu.style.opacity = '0';
                     mobileMenu.style.transform = 'translateY(-10px)';
                     
@@ -927,26 +953,22 @@
                         mobileMenu.classList.add('hidden');
                     }, 300);
                     
-                    // Reset hamburger
                     const lines = mobileMenuBtn.querySelectorAll('span.block');
                     lines[0].style.transform = '';
                     lines[1].style.opacity = '1';
                     lines[2].style.transform = '';
                     
-                    // Reset button style
                     mobileMenuBtn.style.background = 'rgba(147, 51, 234, 0.2)';
                     mobileMenuBtn.style.borderColor = '#a855f7';
                 }
             });
 
-            // Close menu when clicking outside
             document.addEventListener('click', function(e) {
                 if (isMenuOpen && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                     mobileMenuBtn.click();
                 }
             });
 
-            // Close menu when clicking menu links
             const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
             mobileMenuLinks.forEach(link => {
                 link.addEventListener('click', function() {
@@ -955,31 +977,6 @@
                             mobileMenuBtn.click();
                         }, 100);
                     }
-                });
-            });
-
-            // Add ripple effect to menu items
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    const ripple = document.createElement('div');
-                    ripple.className = 'absolute bg-purple-400 rounded-full opacity-50';
-                    ripple.style.width = ripple.style.height = '20px';
-                    ripple.style.left = (e.clientX - this.offsetLeft - 10) + 'px';
-                    ripple.style.top = (e.clientY - this.offsetTop - 10) + 'px';
-                    ripple.style.transform = 'scale(0)';
-                    ripple.style.transition = 'transform 0.6s ease';
-                    
-                    this.style.position = 'relative';
-                    this.appendChild(ripple);
-                    
-                    setTimeout(() => {
-                        ripple.style.transform = 'scale(4)';
-                        ripple.style.opacity = '0';
-                    }, 10);
-                    
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
                 });
             });
         }
@@ -999,7 +996,6 @@
             });
         }, observerOptions);
 
-        // Observe all cards for animation
         document.querySelectorAll('.card-hover').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(30px)';
@@ -1024,58 +1020,39 @@
             }, 16);
         }
 
-        // Start counters when page loads
         setTimeout(() => {
             animateCounter('visitorsCount', 1247);
             animateCounter('ordersToday', 89);
         }, 1000);
 
-        // Add some dynamic effects
         setInterval(() => {
             const visitors = document.getElementById('visitorsCount');
             const orders = document.getElementById('ordersToday');
             
-            // Randomly update visitors count
             if (Math.random() > 0.7) {
                 const currentCount = parseInt(visitors.textContent.replace(',', ''));
-                const change = Math.floor(Math.random() * 5) - 2; // -2 to +2
+                const change = Math.floor(Math.random() * 5) - 2;
                 visitors.textContent = (currentCount + change).toLocaleString();
             }
             
-            // Randomly update orders count
             if (Math.random() > 0.8) {
                 const currentOrders = parseInt(orders.textContent);
                 orders.textContent = currentOrders + 1;
             }
         }, 5000);
 
-        // Newsletter subscription
-        document.querySelector('input[type="email"]').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                const email = this.value;
-                if (email) {
-                    alert('Terima kasih! Anda akan mendapatkan update terbaru dari ZL CLOTH INDUSTRIES.');
-                    this.value = '';
-                }
-            }
-        });
-
         // Interactive Hero Buttons
         document.getElementById('exploreCollectionBtn').addEventListener('click', function() {
-            // Smooth scroll to koleksi section
             document.getElementById('koleksi').scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
             
-            // Add visual feedback
             this.style.transform = 'scale(0.95)';
             setTimeout(() => {
                 this.style.transform = '';
             }, 150);
             
-            // Highlight collection cards with animation
             setTimeout(() => {
                 const cards = document.querySelectorAll('#koleksi .card-hover');
                 cards.forEach((card, index) => {
@@ -1092,19 +1069,16 @@
         });
 
         document.getElementById('seeTrendingBtn').addEventListener('click', function() {
-            // Smooth scroll to trending section
             document.getElementById('trending').scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
             
-            // Add visual feedback
             this.style.transform = 'scale(0.95)';
             setTimeout(() => {
                 this.style.transform = '';
             }, 150);
             
-            // Highlight trending content with pulse effect
             setTimeout(() => {
                 const trendingCards = document.querySelectorAll('#trending .bg-white');
                 trendingCards.forEach((card, index) => {
@@ -1120,8 +1094,6 @@
             }, 800);
         });
 
-        // All Button Functionality
-        
         // Product Detail Buttons
         document.querySelectorAll('.product-detail-btn').forEach(btn => {
             btn.addEventListener('click', function() {
@@ -1155,7 +1127,6 @@
                     alert(`✨ ${info.name} ✨\n\n💰 Harga: ${info.price}\n\n📝 Deskripsi: ${info.description}\n\n📏 Ukuran: ${info.sizes}\n\n🎨 Warna: ${info.colors}\n\n💬 Hubungi WhatsApp: +62 812 3456 7890 untuk order!`);
                 }
                 
-                // Add click animation
                 this.style.transform = 'scale(0.95)';
                 setTimeout(() => {
                     this.style.transform = '';
@@ -1173,7 +1144,6 @@
                 alert(`🎉 Terima kasih ${email}!\n\nAnda telah berlangganan newsletter ZL CLOTH INDUSTRIES.\n\n✅ Dapatkan update koleksi terbaru\n✅ Promo eksklusif subscriber\n✅ Fashion tips & trends\n\nCheck email Anda untuk konfirmasi!`);
                 newsletterEmail.value = '';
                 
-                // Success animation
                 subscribeBtn.style.background = '#10B981';
                 subscribeBtn.textContent = '✓ Subscribed!';
                 setTimeout(() => {
@@ -1198,7 +1168,6 @@
         document.getElementById('claimPromoBtn').addEventListener('click', function() {
             alert(`🎁 PROMO SPESIAL ACTIVATED! 🎁\n\n✨ BELI 2 GRATIS 1 untuk semua koleksi blouse!\n\n📅 Berlaku sampai akhir bulan\n💳 Minimum pembelian Rp 500K\n🚚 Free ongkir ke seluruh Indonesia\n\n💬 Langsung order via WhatsApp:\n+62 812 3456 7890\n\n🔥 Sebutkan kode: PROMO2024`);
             
-            // Promo animation
             this.style.background = 'linear-gradient(45deg, #10B981, #059669)';
             this.style.color = 'white';
             this.textContent = '🎉 Promo Claimed!';
@@ -1212,63 +1181,6 @@
         // Size Guide Button
         document.querySelector('.size-guide-btn').addEventListener('click', function() {
             alert(`📏 SIZE GUIDE ZL CLOTH 📏\n\n👗 DRESS & BLOUSE:\n• S: Lingkar Dada 88cm, Panjang 95cm\n• M: Lingkar Dada 92cm, Panjang 97cm\n• L: Lingkar Dada 96cm, Panjang 99cm\n• XL: Lingkar Dada 100cm, Panjang 101cm\n\n👔 JUMPSUIT:\n• S: Lingkar Dada 86cm, Panjang 150cm\n• M: Lingkar Dada 90cm, Panjang 152cm\n• L: Lingkar Dada 94cm, Panjang 154cm\n• XL: Lingkar Dada 98cm, Panjang 156cm\n\n💡 Tips: Ukur lingkar dada saat menggunakan bra, untuk hasil yang akurat!`);
-        });
-
-        // Category Links in Footer
-        document.querySelectorAll('.category-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const category = this.getAttribute('data-category');
-                
-                // Scroll to collection section
-                document.getElementById('koleksi').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                
-                // Highlight relevant category
-                setTimeout(() => {
-                    alert(`🔍 Menampilkan koleksi ${category.toUpperCase()}\n\n✨ Lihat produk-produk ${category} terbaru kami di section Koleksi Unggulan!\n\n💬 Untuk katalog lengkap ${category}, hubungi WhatsApp: +62 812 3456 7890`);
-                }, 1000);
-            });
-        });
-
-        // Service Links in Footer
-        document.querySelectorAll('.service-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const service = this.getAttribute('data-service');
-                
-                const serviceInfo = {
-                    'size-guide': '📏 SIZE GUIDE\n\nPanduan lengkap ukuran untuk semua produk ZL CLOTH. Ukur dengan teliti untuk mendapatkan fit yang perfect!',
-                    'shipping': '🚚 SHIPPING INFO\n\n• JNE, J&T, SiCepat tersedia\n• Free ongkir min. Rp 200K\n• Estimasi 2-4 hari kerja\n• Same day delivery (Jakarta)',
-                    'return': '🔄 RETURN POLICY\n\n• Return mudah dalam 7 hari\n• Barang belum dicuci/dipakai\n• Tag masih terpasang\n• Biaya return ditanggung customer',
-                    'customer-care': '💬 CUSTOMER CARE\n\nTeam customer service kami siap membantu Anda 24/7!'
-                };
-                
-                if (serviceInfo[service]) {
-                    alert(serviceInfo[service] + '\n\n💬 WhatsApp: +62 812 3456 7890\n📧 Email: support@zlcloth.com');
-                }
-            });
-        });
-
-        // Social Media Links with Analytics
-        document.querySelectorAll('.social-link').forEach(link => {
-            link.addEventListener('click', function() {
-                const platform = this.href.includes('instagram') ? 'Instagram' : 
-                               this.href.includes('facebook') ? 'Facebook' :
-                               this.href.includes('twitter') ? 'Twitter' :
-                               this.href.includes('wa.me') ? 'WhatsApp' : 'Social Media';
-                
-                // Add click tracking
-                console.log(`User clicked ${platform} link`);
-                
-                // Add visual feedback
-                this.style.transform = 'scale(1.1)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 200);
-            });
         });
 
         // Multi-language translations
@@ -1358,250 +1270,7 @@
                 'product.jumpsuit': 'Modern Jumpsuit',
                 'product.dress.desc': 'Perfect for casual or formal events',
                 'product.blouse.desc': 'Perfect combination for professional look',
-                'product.jumpsuit.desc': 'Statement piece to look confident',
-                'trending.title': 'Trending Now',
-                'trending.subtitle': 'Follow the latest fashion trends popular among modern women',
-                'trending.blazer': '🌟 Oversized Blazer',
-                'trending.blazer.desc': 'Oversized blazer trend that gives a professional yet stylish impression for various occasions.',
-                'trending.skirt': '✨ Midi Skirt',
-                'trending.skirt.desc': 'Midi skirts with various patterns and colors suitable for feminine and elegant style.',
-                'trending.crop': '💫 Crop Top Sets',
-                'trending.crop.desc': 'Trendy and versatile crop top sets, perfect for casual or semi-formal looks.',
-                'about.title': 'About ZL CLOTH',
-                'about.desc1': 'ZL CLOTH is a women\'s fashion brand committed to providing high-quality clothing with designs that follow the latest trends. We believe that every woman deserves to appear confident with a unique style.',
-                'about.desc2': 'With years of experience in the fashion industry, we continue to innovate to provide the best collections that combine comfort, quality, and modern style.',
-                'about.products': 'Quality Products',
-                'about.customers': 'Satisfied Customers',
-                'newsletter.title': 'Stay Updated',
-                'newsletter.subtitle': 'Get the latest info about collections and exclusive promos!',
-                'newsletter.subscribe': 'Subscribe',
-                'newsletter.placeholder': 'Email address',
-                'reviews.title': 'What Our Customers Say',
-                'reviews.subtitle': 'Testimonials from fashionistas who have experienced ZL quality',
-                'reviews.sarah': '"The material quality is very good and the designs are always up to date. I\'m a regular customer at ZL!"',
-                'reviews.teh': '"Fast service, neat packaging, and most importantly the clothes always meet expectations!"',
-                'reviews.puspa': '"Size chart is very accurate and the material is really premium. Worth every penny!"',
-                'promo.title': 'Special Promo!',
-                'promo.desc': 'Buy 2 get 1 free for all blouse collections!',
-                'promo.terms': '*Valid until end of month, terms and conditions apply',
-                'promo.claim': 'Claim Promo Now!',
-                'features.size': 'Size Guide',
-                'features.size.desc': 'Complete size guide',
-                'features.size.btn': 'View Guide',
-                'features.shipping': 'Free Shipping',
-                'features.shipping.desc': 'Free shipping min. 200K',
-                'features.return': 'Easy Return',
-                'features.return.desc': 'Easy return 7 days',
-                'features.payment': 'Secure Payment',
-                'features.payment.desc': '& 100+ other payment methods',
-                'contact.title': 'Contact Us',
-                'contact.subtitle': 'Ready to help you find the perfect outfit for every moment',
-                'contact.address': 'Address',
-                'contact.whatsapp': 'WhatsApp',
-                'contact.email': 'Email',
-                'footer.brand': 'Quality women\'s fashion for modern lifestyle.',
-                'footer.products': 'Products',
-                'footer.services': 'Services',
-                'footer.follow': 'Follow Us',
-                'footer.copyright': '© 2024 ZL CLOTH. All rights reserved.'
-            },
-            jp: {
-                'nav.home': 'ホーム',
-                'nav.collection': 'コレクション',
-                'nav.trending': 'トレンド',
-                'nav.about': '会社概要',
-                'nav.contact': 'お問い合わせ',
-                'hero.subtitle': 'モダンライフスタイルのためのトレンディな女性ファッション',
-                'hero.explore': 'コレクションを見る',
-                'hero.trending': 'トレンドを見る',
-                'hero.online': 'オンライン中',
-                'hero.orders': '本日の注文',
-                'collection.title': 'おすすめコレクション',
-                'collection.subtitle': '独占デザインとプレミアム品質の最新女性服を発見してください',
-                'product.detail': '詳細',
-                'product.dress': 'エレガントカジュアルドレス',
-                'product.blouse': 'トレンディブラウス',
-                'product.jumpsuit': 'モダンジャンプスーツ',
-                'product.dress.desc': 'カジュアルまたはフォーマルなイベントに最適',
-                'product.blouse.desc': 'プロフェッショナルルックの完璧な組み合わせ',
-                'product.jumpsuit.desc': '自信を持って見えるステートメントピース',
-                'trending.title': '今のトレンド',
-                'trending.subtitle': 'モダンな女性に人気の最新ファッショントレンドをフォロー',
-                'trending.blazer': '🌟 オーバーサイズブレザー',
-                'trending.blazer.desc': 'さまざまな機会にプロフェッショナルでありながらスタイリッシュな印象を与えるオーバーサイズブレザートレンド。',
-                'trending.skirt': '✨ ミディスカート',
-                'trending.skirt.desc': 'フェミニンでエレガントなスタイルに適したさまざまなパターンと色のミディスカート。',
-                'trending.crop': '💫 クロップトップセット',
-                'trending.crop.desc': 'トレンディで多用途なクロップトップセット、カジュアルまたはセミフォーマルなルックに最適。',
-                'about.title': 'ZL CLOTHについて',
-                'about.desc1': 'ZL CLOTHは、最新のトレンドに従ったデザインで高品質の衣類を提供することにコミットした女性ファッションブランドです。すべての女性がユニークなスタイルで自信を持って現れる権利があると信じています。',
-                'about.desc2': 'ファッション業界での長年の経験により、快適性、品質、現代的なスタイルを組み合わせた最高のコレクションを提供するために革新を続けています。',
-                'about.products': '品質製品',
-                'about.customers': '満足顧客',
-                'newsletter.title': '最新情報をキープ',
-                'newsletter.subtitle': 'コレクションと限定プロモの最新情報をゲット！',
-                'newsletter.subscribe': '購読する',
-                'newsletter.placeholder': 'メールアドレス',
-                'reviews.title': 'お客様の声',
-                'reviews.subtitle': 'ZLの品質を体験したファッショニスタからの証言',
-                'reviews.sarah': '"素材の品質がとても良く、デザインはいつも最新です。ZLで常連客です！"',
-                'reviews.teh': '"迅速なサービス、きちんとした包装、そして最も重要なことは、服が常に期待に応えることです！"',
-                'reviews.puspa': '"サイズチャートは非常に正確で、素材は本当にプレミアムです。すべてのペニーに値する！"',
-                'promo.title': 'スペシャルプロモ！',
-                'promo.desc': 'すべてのブラウスコレクションで2つ買うと1つ無料！',
-                'promo.terms': '*月末まで有効、利用規約が適用されます',
-                'promo.claim': '今すぐプロモをクレーム！',
-                'features.size': 'サイズガイド',
-                'features.size.desc': '完全なサイズガイド',
-                'features.size.btn': 'ガイドを見る',
-                'features.shipping': '送料無料',
-                'features.shipping.desc': '200K以上で送料無料',
-                'features.return': '簡単返品',
-                'features.return.desc': '7日間簡単返品',
-                'features.payment': '安全な支払い',
-                'features.payment.desc': '& 100以上の他の支払い方法',
-                'contact.title': 'お問い合わせ',
-                'contact.subtitle': 'あらゆる瞬間に完璧な服装を見つけるお手伝いをします',
-                'contact.address': '住所',
-                'contact.whatsapp': 'WhatsApp',
-                'contact.email': 'メール',
-                'footer.brand': 'モダンライフスタイルのための品質女性ファッション。',
-                'footer.products': '製品',
-                'footer.services': 'サービス',
-                'footer.follow': 'フォローする',
-                'footer.copyright': '© 2024 ZL CLOTH. All rights reserved.'
-            },
-            kr: {
-                'nav.home': '홈',
-                'nav.collection': '컬렉션',
-                'nav.trending': '트렌드',
-                'nav.about': '회사소개',
-                'nav.contact': '연락처',
-                'hero.subtitle': '현대적 라이프스타일을 위한 트렌디한 여성 패션',
-                'hero.explore': '컬렉션 탐색',
-                'hero.trending': '트렌드 보기',
-                'hero.online': '현재 온라인',
-                'hero.orders': '오늘 주문',
-                'collection.title': '추천 컬렉션',
-                'collection.subtitle': '독점 디자인과 프리미엄 품질의 최신 여성복을 만나보세요',
-                'product.detail': '상세정보',
-                'product.dress': '우아한 캐주얼 드레스',
-                'product.blouse': '트렌디 블라우스',
-                'product.jumpsuit': '모던 점프수트',
-                'product.dress.desc': '캐주얼 또는 포멀한 행사에 완벽',
-                'product.blouse.desc': '전문적인 룩을 위한 완벽한 조합',
-                'product.jumpsuit.desc': '자신감 있게 보이기 위한 스테이트먼트 피스',
-                'trending.title': '지금 트렌드',
-                'trending.subtitle': '현대 여성들 사이에서 인기 있는 최신 패션 트렌드를 따라해보세요',
-                'trending.blazer': '🌟 오버사이즈 블레이저',
-                'trending.blazer.desc': '다양한 상황에서 전문적이면서도 스타일리시한 인상을 주는 오버사이즈 블레이저 트렌드.',
-                'trending.skirt': '✨ 미디 스커트',
-                'trending.skirt.desc': '여성스럽고 우아한 스타일에 적합한 다양한 패턴과 색상의 미디 스커트.',
-                'trending.crop': '💫 크롭 탑 세트',
-                'trending.crop.desc': '트렌디하고 다재다능한 크롭 탑 세트, 캐주얼 또는 세미 포멀한 룩에 완벽.',
-                'about.title': 'ZL CLOTH 소개',
-                'about.desc1': 'ZL CLOTH는 최신 트렌드를 따르는 디자인으로 고품질 의류를 제공하는 데 전념하는 여성 패션 브랜드입니다. 모든 여성이 독특한 스타일로 자신감 있게 나타날 권리가 있다고 믿습니다.',
-                'about.desc2': '패션 업계에서의 수년간의 경험을 통해 편안함, 품질, 현대적 스타일을 결합한 최고의 컬렉션을 제공하기 위해 계속 혁신하고 있습니다.',
-                'about.products': '품질 제품',
-                'about.customers': '만족한 고객',
-                'newsletter.title': '최신 정보 받기',
-                'newsletter.subtitle': '컬렉션과 독점 프로모션의 최신 정보를 받아보세요!',
-                'newsletter.subscribe': '구독하기',
-                'newsletter.placeholder': '이메일 주소',
-                'reviews.title': '고객 후기',
-                'reviews.subtitle': 'ZL의 품질을 경험한 패셔니스타들의 증언',
-                'reviews.sarah': '"소재의 품질이 매우 좋고 디자인이 항상 최신입니다. ZL의 단골 고객입니다!"',
-                'reviews.teh': '"빠른 서비스, 깔끔한 포장, 그리고 가장 중요한 것은 옷이 항상 기대에 부응한다는 것입니다!"',
-                'reviews.puspa': '"사이즈 차트가 매우 정확하고 소재가 정말 프리미엄입니다. 모든 돈의 가치가 있습니다!"',
-                'promo.title': '스페셜 프로모!',
-                'promo.desc': '모든 블라우스 컬렉션에서 2개 구매시 1개 무료!',
-                'promo.terms': '*월말까지 유효, 이용 약관이 적용됩니다',
-                'promo.claim': '지금 프로모 받기!',
-                'features.size': '사이즈 가이드',
-                'features.size.desc': '완전한 사이즈 가이드',
-                'features.size.btn': '가이드 보기',
-                'features.shipping': '무료 배송',
-                'features.shipping.desc': '200K 이상 무료 배송',
-                'features.return': '간편 반품',
-                'features.return.desc': '7일 간편 반품',
-                'features.payment': '안전한 결제',
-                'features.payment.desc': '& 100개 이상의 다른 결제 방법',
-                'contact.title': '연락처',
-                'contact.subtitle': '모든 순간에 완벽한 의상을 찾는 데 도움을 드릴 준비가 되어 있습니다',
-                'contact.address': '주소',
-                'contact.whatsapp': 'WhatsApp',
-                'contact.email': '이메일',
-                'footer.brand': '현대적 라이프스타일을 위한 품질 여성 패션.',
-                'footer.products': '제품',
-                'footer.services': '서비스',
-                'footer.follow': '팔로우',
-                'footer.copyright': '© 2024 ZL CLOTH. All rights reserved.'
-            },
-            cn: {
-                'nav.home': '首页',
-                'nav.collection': '系列',
-                'nav.trending': '趋势',
-                'nav.about': '关于我们',
-                'nav.contact': '联系我们',
-                'hero.subtitle': '现代生活方式的时尚女装',
-                'hero.explore': '探索系列',
-                'hero.trending': '查看趋势',
-                'hero.online': '在线人数',
-                'hero.orders': '今日订单',
-                'collection.title': '精选系列',
-                'collection.subtitle': '发现独家设计和优质品质的最新女装',
-                'product.detail': '详情',
-                'product.dress': '优雅休闲连衣裙',
-                'product.blouse': '时尚衬衫',
-                'product.jumpsuit': '现代连体裤',
-                'product.dress.desc': '适合休闲或正式场合',
-                'product.blouse.desc': '专业造型的完美组合',
-                'product.jumpsuit.desc': '展现自信的亮点单品',
-                'trending.title': '现在流行',
-                'trending.subtitle': '跟随现代女性中流行的最新时尚趋势',
-                'trending.blazer': '🌟 超大号西装外套',
-                'trending.blazer.desc': '超大号西装外套趋势，在各种场合都能营造专业而时尚的印象。',
-                'trending.skirt': '✨ 中长裙',
-                'trending.skirt.desc': '适合女性优雅风格的各种图案和颜色的中长裙。',
-                'trending.crop': '💫 短上衣套装',
-                'trending.crop.desc': '时尚多用途的短上衣套装，适合休闲或半正式的造型。',
-                'about.title': '关于 ZL CLOTH',
-                'about.desc1': 'ZL CLOTH是一个致力于提供跟随最新趋势设计的高品质服装的女性时尚品牌。我们相信每个女性都有权以独特的风格自信地出现。',
-                'about.desc2': '凭借在时尚行业多年的经验，我们继续创新，提供结合舒适性、品质和现代风格的最佳系列。',
-                'about.products': '优质产品',
-                'about.customers': '满意客户',
-                'newsletter.title': '保持更新',
-                'newsletter.subtitle': '获取系列和独家促销的最新信息！',
-                'newsletter.subscribe': '订阅',
-                'newsletter.placeholder': '电子邮件地址',
-                'reviews.title': '客户评价',
-                'reviews.subtitle': '体验过ZL品质的时尚达人的证言',
-                'reviews.sarah': '"材料质量非常好，设计总是最新的。我是ZL的常客！"',
-                'reviews.teh': '"快速服务，包装整齐，最重要的是衣服总是符合期望！"',
-                'reviews.puspa': '"尺码表非常准确，材料真的很高档。物有所值！"',
-                'promo.title': '特别促销！',
-                'promo.desc': '所有衬衫系列买二送一！',
-                'promo.terms': '*有效期至月底，条款和条件适用',
-                'promo.claim': '立即获取促销！',
-                'features.size': '尺码指南',
-                'features.size.desc': '完整尺码指南',
-                'features.size.btn': '查看指南',
-                'features.shipping': '免费送货',
-                'features.shipping.desc': '满200K免费送货',
-                'features.return': '简易退货',
-                'features.return.desc': '7天简易退货',
-                'features.payment': '安全支付',
-                'features.payment.desc': '& 100多种其他支付方式',
-                'contact.title': '联系我们',
-                'contact.subtitle': '准备帮助您为每个时刻找到完美的装扮',
-                'contact.address': '地址',
-                'contact.whatsapp': 'WhatsApp',
-                'contact.email': '电子邮件',
-                'footer.brand': '现代生活方式的优质女性时尚。',
-                'footer.products': '产品',
-                'footer.services': '服务',
-                'footer.follow': '关注我们',
-                'footer.copyright': '© 2024 ZL CLOTH. All rights reserved.'
+                'product.jumpsuit.desc': 'Statement piece to look confident'
             }
         };
 
@@ -1612,7 +1281,6 @@
             currentLanguage = lang;
             localStorage.setItem('zlcloth-language', lang);
             
-            // Update all elements with data-key attributes
             document.querySelectorAll('[data-key]').forEach(element => {
                 const key = element.getAttribute('data-key');
                 if (translations[lang] && translations[lang][key]) {
@@ -1620,7 +1288,6 @@
                 }
             });
             
-            // Update placeholders for input elements
             document.querySelectorAll('[data-key-placeholder]').forEach(element => {
                 const key = element.getAttribute('data-key-placeholder');
                 if (translations[lang] && translations[lang][key]) {
@@ -1628,7 +1295,6 @@
                 }
             });
             
-            // Update language selector display
             const languageFlags = {
                 'id': '🇮🇩',
                 'en': '🇺🇸', 
@@ -1647,38 +1313,6 @@
             
             document.querySelector('.current-language-flag').textContent = languageFlags[lang];
             document.querySelector('.current-language-text').textContent = languageNames[lang];
-            
-            // Add success notification
-            showLanguageNotification(lang);
-        }
-        
-        function showLanguageNotification(lang) {
-            const messages = {
-                'id': '🇮🇩 Bahasa berubah ke Bahasa Indonesia',
-                'en': '🇺🇸 Language changed to English',
-                'jp': '🇯🇵 言語が日本語に変更されました',
-                'kr': '🇰🇷 언어가 한국어로 변경되었습니다',
-                'cn': '🇨🇳 语言已更改为中文'
-            };
-            
-            // Create notification
-            const notification = document.createElement('div');
-            notification.className = 'fixed top-20 right-4 bg-purple-600 text-white px-6 py-3 rounded-xl shadow-lg z-50 transform translate-x-full transition-transform duration-300';
-            notification.textContent = messages[lang];
-            document.body.appendChild(notification);
-            
-            // Animate in
-            setTimeout(() => {
-                notification.style.transform = 'translateX(0)';
-            }, 100);
-            
-            // Animate out and remove
-            setTimeout(() => {
-                notification.style.transform = 'translateX(full)';
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 300);
-            }, 2000);
         }
         
         // Language selector functionality
@@ -1709,25 +1343,21 @@
             }
         });
         
-        // Close language dropdown when clicking outside
         document.addEventListener('click', function(e) {
             if (isLanguageDropdownOpen && !languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
                 languageBtn.click();
             }
         });
         
-        // Language option clicks
         document.querySelectorAll('.language-option').forEach(option => {
             option.addEventListener('click', function() {
                 const selectedLang = this.getAttribute('data-lang');
                 updateLanguage(selectedLang);
                 
-                // Close dropdown
                 if (isLanguageDropdownOpen) {
                     languageBtn.click();
                 }
                 
-                // Add click animation
                 this.style.transform = 'scale(0.95)';
                 setTimeout(() => {
                     this.style.transform = '';
@@ -1735,55 +1365,8 @@
             });
         });
         
-        // Initialize with saved language
         updateLanguage(currentLanguage);
-
-        // Add pulse animation CSS
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes pulse {
-                0% { transform: scale(1); }
-                50% { transform: scale(1.02); }
-                100% { transform: scale(1); }
-            }
-            
-            .hero-button-active {
-                background: linear-gradient(45deg, #ec4899, #8b5cf6) !important;
-                color: white !important;
-                box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3) !important;
-            }
-            
-            .collection-highlight {
-                border: 2px solid #ec4899 !important;
-                box-shadow: 0 25px 50px -12px rgba(236, 72, 153, 0.25) !important;
-            }
-            
-            .product-detail-btn:hover {
-                box-shadow: 0 10px 25px rgba(147, 51, 234, 0.3) !important;
-            }
-            
-            .social-link:hover {
-                transform: translateY(-2px) !important;
-            }
-            
-            .language-selector {
-                position: relative;
-            }
-            
-            .language-dropdown {
-                backdrop-filter: blur(10px);
-                background: rgba(255, 255, 255, 0.95);
-            }
-            
-            .language-option:hover {
-                background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(236, 72, 153, 0.1));
-            }
-            
-            .current-language-flag {
-                font-size: 1.2em;
-            }
-        `;
-        document.head.appendChild(style);
     </script>
 </body>
 </html>
+```
